@@ -8,7 +8,7 @@ import pandas as pd
 from scipy.interpolate import interp1d
 
 # Lee archivo de datos
-df = pd.read_parquet(os.path.join(os.path.dirname(__file__), 'data/trajectory_data.parquet'))
+df = pd.read_parquet(os.path.join(os.path.dirname(__file__), 'data','trajectory_data.parquet'))
 
 # Crea funciones de interpolación para posición y velocidad
 interp_q1 = interp1d(df['time'], df['q1'], kind='linear', fill_value='extrapolate')
@@ -18,7 +18,7 @@ interp_dq1 = interp1d(df['time'], df['dq1'], kind='linear', fill_value='extrapol
 interp_dq2 = interp1d(df['time'], df['dq2'], kind='linear', fill_value='extrapolate')
 
 # Ruta al modelo de simulación
-xml_path = os.path.join(os.path.dirname(__file__), "assets\\5_bar.xml") 
+xml_path = os.path.join(os.path.dirname(__file__), "assets","5_bar.xml") 
 
 # Tiempo de simulación (en segundos)
 simend = 4 
