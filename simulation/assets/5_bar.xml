@@ -39,6 +39,7 @@
     <sensor>
 		<framepos objtype="body" objname="end_effector"/>
 		<framelinvel objtype="body" objname="end_effector"/>
+	    	<framelinacc objtype="body" objname="end_effector"/>
 	</sensor>
     <actuator>
         <motor joint="joint1" ctrllimited="true"  ctrlrange="-1.6 1.6"/>
